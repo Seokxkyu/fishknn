@@ -13,6 +13,8 @@ requires-python = "==3.11.*"
 readme = "README.md"
 license = {text = "MIT"}
 
+[project.scripts]
+predictor = "fishknn.predict:fish_pred"
 
 [tool.pdm]
 distribution = false

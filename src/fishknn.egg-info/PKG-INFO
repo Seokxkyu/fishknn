@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: fishknn
+Version: 0.1.0
+Summary: Default template for PDM package
+Author-email: Seokxkyu <kyuseok000@gmail.com>
+License: MIT
+Requires-Python: ==3.11.*
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=2.2.2
+Requires-Dist: scikit-learn>=1.5.1
+
+# fishknn
