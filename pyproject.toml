@@ -17,4 +17,4 @@ license = {text = "MIT"}
 predictor = "fishknn.predict:fish_pred"
 
 [tool.pdm]
-distribution = false
+distribution = true
