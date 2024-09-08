@@ -57,9 +57,9 @@ def fish_pred():
         df.to_csv(file_path, index=False)
         print("🐟 예측 성공🥳")
     else:
-        # 예측이 틀렸을 경우 정답 입력받아 저장
-        fish_class = int(input("🐟 이 물고기는 빙어이면 1, 도미이면 0을 입력하세요: "))
-        fish_real_name = "빙어" if fish_class == 1 else "도미"
+        # 예측이 틀렸을 경우 정답을 자동으로 추가
+        fish_class = 1 if fish_pred_name == "도미" else 0  # 예측과 반대의 값이 정답
+        fish_real_name = "도미" if fish_class == 0 else "빙어"
         if len(df) < 50:  # 학습 데이터가 50개 미만이면 추가
             new_df = pd.DataFrame({'length': [l], "weight": [w], "label": [fish_class]})
             df = pd.concat([df, new_df], ignore_index=True)
