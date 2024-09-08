@@ -42,7 +42,9 @@ def fish_pred():
     model.fit(x, y)
     
     # 예측
-    prediction = model.predict([[l, w]])
+    input_data = pd.DataFrame([[l, w]], columns=['length', 'weight'])  
+    # 입력 데이터에 열 이름 추가
+    prediction = model.predict(input_data)
     fish_pred_name = "빙어" if prediction == 1 else "도미"
     
     # 예측 결과 출력
@@ -66,3 +68,5 @@ def fish_pred():
             df.to_csv(file_path, index=False)
         print(f"🐟 오답입니다. 정답은 {fish_real_name}입니다.")
     return True
+
+fish_pred()
