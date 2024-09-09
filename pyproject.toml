@@ -1,5 +1,5 @@
 [project]
-name = "fishknn"
+name = "seokxkyu_fishknn"
 version = "1.0.0"
 description = "Default template for PDM package"
 authors = [
